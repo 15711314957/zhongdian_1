@@ -543,7 +543,7 @@
                                         <div class="book-info fl" th:object="${firstBook}">
                                             <h3>NO.1</h3>
                                             <h4>
-                                                <a href="//book.qidian.com/info/1005986994" target="_blank" data-eid="qd_C40" data-bid="1005986994" th:text="*{name}">我是至尊</a>
+                                                <a th:href="@{/findBookById(id=*{id})}" target="_blank" data-eid="qd_C40" data-bid="1005986994" th:text="*{name}">我是至尊</a>
                                             </h4>
                                             <p class="digital" th:text="*{ticket}"><em>27162</em>月票</p>
                                             <p class="author">
@@ -552,7 +552,7 @@
                                         </div>
                                         <div class="book-cover">
                                             <a class="link" href="//book.qidian.com/info/1005986994" target="_blank" data-eid="qd_C39" data-bid="1005986994">
-                                                <img src="//qidian.qpic.cn/qdbimg/349573/1005986994/90" th:attr="src=${firstBook.picpath}">
+                                                <img src="" th:attr="src=${firstBook.picpath}" th:href="@{/findBookById(id=*{id})}">
                                             </a>
                                             <span></span>
                                         </div>
@@ -563,7 +563,7 @@
                                     <div class="num-box"><span class="num2" th:text="${bbt.sortNum}">2</span></div>
                                     <div class="name-box">
 
-                                        <a class="name" href="//book.qidian.com/info/1009584934" target="_blank" data-eid="qd_C40" data-bid="1009584934" th:text="${bbt.name}">超武穿梭</a>
+                                        <a class="name" th:href="@{/findBookById(id=${bbt.id})}" target="_blank" data-eid="qd_C40" data-bid="1009584934" th:text="${bbt.name}" >超武穿梭</a>
 
                                         <i class="total" th:text="${bbt.ticket}">2634</i>
                                     </div>

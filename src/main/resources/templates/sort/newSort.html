@@ -633,12 +633,12 @@
                                     <!--<a href="//book.qidian.com/info/1004608738" target="_blank" data-eid="qd_C39" data-bid="1004608738"><img src="${books.picpath}"></a>-->
                                 <!--</div>
                                 th:href="@{/findBookById(id=${book.id})}"-->
-                                <div class="book-img-box">
+                                <div class="book-img-box" >
                                     <span  class="rank-tag no1" th:text="${books.sortNum}"><cite></cite></span>
-                                    <a href="#"  data-bid="3513193" data-eid="qd_B57" target="_blank"><img th:attr="src=${books.picpath}"  src=""></a>
+                                    <a th:href="@{/findBookById(id=${books.id})}" data-bid="3513193" data-eid="qd_B57" target="_blank"><img th:attr="src=${books.picpath}"  src="" th:href="@{/findBookById(id=${books.id})}"></a>
                                 </div>
                                 <div class="book-mid-info">
-                                    <h4><a href="//book.qidian.com/info/1004608738" th:text="${books.name}" target="_blank" data-eid="qd_C40" data-bid="1004608738"></a></h4>
+                                    <h4><a th:href="@{/findBookById(id=${books.id})}" th:text="${books.name}" target="_blank" data-eid="qd_C40" data-bid="1004608738"></a></h4>
                                     <p class="author">
                                         <img src="//qidian.gtimg.com/qd/images/ico/user.0.2.png"><a class="name" th:text="${books.author}" href="//me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_C41"></a><em>|</em><a href="//xuanhuan.qidian.com" th:text="${books.bigType.name}" target="_blank" data-eid="qd_C42">玄幻</a><em>|</em><span th:text="${books.status}">连载</span>
                                     </p>
